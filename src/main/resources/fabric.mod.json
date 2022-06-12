@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "simple_conveyors",
   "version": "${version}",
 
-  "name": "",
-  "description": "",
+  "name": "Simple Conveyors",
+  "description": "Allows you to repair broken weapons!",
   "authors": [
     "KaloyanKYS"
   ],
   "contact": {},
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/simple_conveyors/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.kaloyankys.modid.ModName"
+      "me.kaloyankys.simple_conveyors.Conveyors"
     ],
     "client": [
-      "me.kaloyankys.modid.client.ModNameClient"
+      "me.kaloyankys.simple_conveyors.client.ConveyorsClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "simple_conveyors.mixins.json"
   ],
 
   "depends": {
