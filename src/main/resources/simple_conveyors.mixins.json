@@ -4,8 +4,6 @@
   "package": "me.kaloyankys.simple_conveyors.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "HorseEntityMixin",
-    "ItemMixin"
   ],
   "client": [
   ],

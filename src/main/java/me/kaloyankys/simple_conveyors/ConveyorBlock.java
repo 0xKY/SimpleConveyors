@@ -8,6 +8,7 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -15,6 +16,9 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class ConveyorBlock extends Block {
+    public static final VoxelShape HORIZONTAL = VoxelShapes.cuboid(0.1, 0.0, 0.0, 0.9, 1.0, 1.0);
+    public static final VoxelShape VERTICAL = VoxelShapes.cuboid(0.0, 0.0, 0.1, 1.0, 1.0, 0.9);
+
     public static final DirectionProperty FACING = DirectionProperty.of("facing");
 
     public ConveyorBlock(Settings settings) {
@@ -52,6 +56,10 @@ public class ConveyorBlock extends Block {
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.cuboid(0.1, 0.0, 0.0, 0.9, 1.0, 1.0);
+        if (state.get(FACING) == Direction.EAST || state.get(FACING) == Direction.WEST) {
+            return HORIZONTAL;
+        } else {
+            return VERTICAL;
+        }
     }
 }
