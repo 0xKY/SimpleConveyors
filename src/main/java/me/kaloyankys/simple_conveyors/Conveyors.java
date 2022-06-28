@@ -16,13 +16,13 @@ public class Conveyors implements ModInitializer {
 	public static final String MOD_ID = "simple_conveyors";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Block CONVEYER = new ConveyorBlock(FabricBlockSettings.copy(Blocks.BLACK_WOOL));
+	public static final Block CONVEYOR = new ConveyorBlock(FabricBlockSettings.copy(Blocks.BLACK_WOOL));
 
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Loaded " + MOD_ID);
 
-		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "conveyor"), CONVEYER);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "conveyor"), new BlockItem(CONVEYER, new FabricItemSettings().group(ItemGroup.REDSTONE)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "conveyor"), CONVEYOR);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "conveyor"), new BlockItem(CONVEYOR, new FabricItemSettings().group(ItemGroup.REDSTONE)));
 	}
 }

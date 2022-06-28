@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#I#",
+        "iii",
+        "#I#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:leather"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "simple_conveyors:conveyor",
+        "count": 1
+    }
+}
